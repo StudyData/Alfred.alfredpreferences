@@ -1,6 +1,11 @@
 # workflows
 Alfred 的workflows 备份，可以在[AlfredWorkflow](http://alfredworkflow.com/)上找到很多好玩的workflow，知乎上有篇[文章](https://www.zhihu.com/question/20656680)对这部分做了很好的说明。
 
+### 同步
+- 进入对应目录：`cd /Users/aa/Library/Application Support/Alfred 3`
+- 与仓库建立关联：`git clone git@github.com:StudyData/Alfred.alfredpreferences.git`
+- `git pull origin master`
+
 ### 使用的workflow说明
 #### UTF8Codec
 - ec 对字符进行url encode
