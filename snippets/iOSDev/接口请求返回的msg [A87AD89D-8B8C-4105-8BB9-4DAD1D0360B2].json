@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "NSString *msg = responseObject[@\"msg\"];",
+    "uid" : "A87AD89D-8B8C-4105-8BB9-4DAD1D0360B2",
+    "name" : "接口请求返回的msg",
+    "keyword" : "msg"
+  }
+}

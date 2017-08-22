@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "NSInteger code = [responseObject[@\"code\"] integerValue];",
+    "uid" : "AB4950C2-A972-44D8-9656-EDB82EB252F1",
+    "name" : "接口的code获取",
+    "keyword" : "code"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "LOG_ERROR(\"UM\", <#format, ...#>);",
+    "uid" : "A4296600-14A2-4A17-B0CF-9FB758C74419",
+    "name" : "用户体系注释",
+    "keyword" : "UMError"
+  }
+}

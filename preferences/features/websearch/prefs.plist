@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>68E340E2-E692-4026-845C-A77D23F3EB4C</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>apple</string>
+			<key>text</key>
+			<string>苹果开发者搜索</string>
+			<key>url</key>
+			<string>https://developer.apple.com/search/?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>D2FA7E48-1649-42A4-812E-80F4D1E7D97F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>taobao</string>
+			<key>text</key>
+			<string>淘宝</string>
+			<key>url</key>
+			<string>http://s.taobao.com/search?q='{query}'</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>DDD08A0C-F162-4848-BF0A-BC4926ADDE6A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>baidu</string>
+			<key>text</key>
+			<string>百度搜索</string>
+			<key>url</key>
+			<string>https://www.baidu.com/s?wd={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E4A7A890-D6C9-465D-A25A-049DDDB2D433</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>zhihu</string>
+			<key>text</key>
+			<string>知乎</string>
+			<key>url</key>
+			<string>http://www.zhihu.com/search?q='{query}'</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

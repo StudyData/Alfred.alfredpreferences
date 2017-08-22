@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "LOG_WARNING(\"UM\", <#format, ...#>);",
+    "uid" : "649E8B33-0BC4-4071-A964-64CF2CFCA163",
+    "name" : "用户体系注释_waring",
+    "keyword" : "UMWARING"
+  }
+}

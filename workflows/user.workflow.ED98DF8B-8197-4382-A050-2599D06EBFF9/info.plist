@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>fradser.quick.dns</string>
+	<key>connections</key>
+	<dict>
+		<key>7B795F21-6B01-41BC-B9E3-FD61CBD828FF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>206ED36A-DD13-43CD-A6C6-6CD6B7CE4DDA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Frad Lee</string>
+	<key>description</key>
+	<string>Quick setup DNS setting. (support 114\V2EX\Google\OpenDNS\Ali and default)</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>QuickDNS</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>dns</string>
+				<key>subtext</key>
+				<string>114 v2ex google opendns ali</string>
+				<key>text</key>
+				<string>Switch DNS</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7B795F21-6B01-41BC-B9E3-FD61CBD828FF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>DEVICE=$(saveIFS="$IFS"
+IFS='
+'
+services=( $(networksetup -listallnetworkservices | sed '/An asterisk ([*]) denotes that a network service is disabled./d; s/^[*]//') )
+IFS="$saveIFS"
+for i in "${services[@]}"; do
+	if [ $(networksetup getinfo $i | grep -c "IP address:\W[1-9]") -eq 1 ]; then
+		echo $i
+	fi
+done
+)
+
+dscacheutil -flushcache
+case "{query}" in
+    "114")
+        networksetup -setdnsservers ${DEVICE%,*} 114.114.114.114 114.114.115.115
+        echo "Using 114 Public DNS on your ${DEVICE%,*} connection."                                                                                                                 
+    ;;
+    "v2ex")
+        networksetup -setdnsservers ${DEVICE%,*} 199.91.73.222 178.79.131.110
+        echo "Using V2EX Public DNS on your ${DEVICE%,*} connection."                                                                                                                 
+    ;;
+    "google")
+        networksetup -setdnsservers ${DEVICE%,*} 8.8.8.8 8.8.4.4
+        echo "Using Google Public DNS on your ${DEVICE%,*} connection."
+    ;;
+    "opendns")
+        networksetup -setdnsservers ${DEVICE%,*} 208.67.222.222 208.67.220.220
+        echo "Using OpenDNS on your ${DEVICE%,*} connection."
+    ;;
+	"ali")
+        networksetup -setdnsservers ${DEVICE%,*} 223.5.5.5 223.6.6.6
+        echo "Using Ali Public DNS on your ${DEVICE%,*} connection."                                                                                                                 
+    ;;
+    *)
+        networksetup -setdnsservers ${DEVICE%,*} empty
+        echo "Using Default DNS on your ${DEVICE%,*} connection."
+    ;;
+esac</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>206ED36A-DD13-43CD-A6C6-6CD6B7CE4DDA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Thanx ry_wang’s QuickDNS.</string>
+	<key>uidata</key>
+	<dict>
+		<key>206ED36A-DD13-43CD-A6C6-6CD6B7CE4DDA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>7B795F21-6B01-41BC-B9E3-FD61CBD828FF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>fradser.me</string>
+</dict>
+</plist>

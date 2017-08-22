@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "LOG_INFO(\"UM\", <#format, ...#>);",
+    "uid" : "497E38C0-8AF3-401C-8490-E766A02324BD",
+    "name" : "用户体系注释_INFO",
+    "keyword" : "UMINFO"
+  }
+}

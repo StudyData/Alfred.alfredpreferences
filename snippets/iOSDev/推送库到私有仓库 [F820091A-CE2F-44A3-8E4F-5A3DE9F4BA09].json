@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "pod repo push PAWFRepo PAWFHUD.podspec --allow-warnings",
+    "uid" : "F820091A-CE2F-44A3-8E4F-5A3DE9F4BA09",
+    "name" : "推送库到私有仓库",
+    "keyword" : "podpush"
+  }
+}
